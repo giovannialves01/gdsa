@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cases de Investigação - Giovanni Alves</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0d0d0d;
+            color: #ffffff;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 260px;
+            background: #111;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border-right: 2px solid #1f1f1f;
+        }
+
+        .sidebar a {
+            color: #4db8ff;
+            text-decoration: none;
+            padding: 8px 0;
+            display: block;
+        }
+
+        .content {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        h1, h2 {
+            margin-top: 0;
+        }
+
+        .case {
+            background: #001f3f;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.4);
+        }
+
+        .case h3 {
+            margin-top: 0;
+        }
+
+        .case a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 14px;
+            background: #004a99;
+            border-radius: 8px;
+            color: #4db8ff;
+            text-decoration: none;
+        }
+
+        .case a:hover {
+            background: #0066cc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <a href="../index.html">🏠 Voltar ao Portfólio</a>
+        <a href="#cases">Cases de Investigação</a>
+
+        <h2>Certificados</h2>
+        <ul style="list-style:none; padding:0; margin-top:10px; display:grid; grid-template-columns: repeat(2, 1fr); gap:10px;">
+            <li><img src="../img/cehv13.webp" alt="CEH v13" width="80"></li>
+            <li><img src="../img/ceh_practical.png" alt="CEH Practical" width="80"></li>
+            <li><img src="../img/ceh_master.png" alt="CEH Master" width="80"></li>
+            <li><img src="../img/securityplus.png" alt="Security+" width="80"></li>
+        </ul>
+
+        <h2>Sobre Mim</h2>
+        <p style="font-size:14px; line-height:1.4;">
+            Cyber Security Consultant | CSIRT | SOC | MDR | CEH Master | Security+<br><br>
+            Email: giovanni33316@gmail.com
+        </p>
+    </div>
+
+    <div class="content">
+        <h1>Cases de Investigação</h1>
+        <p>Abaixo estão alguns estudos reais envolvendo detecção, análise, forense e resposta a incidentes. Cada case acompanha o PDF com documentação completa.</p>
+
+        <section id="cases">
+
+            <!-- CASE 1 -->
+            <div class="case">
+                <h3>📌 Detecção de malware bancário Metamorfo</h3>
+                <p>Este case descreve o processo completo de identificação inicial, correlação de eventos, análise de endpoint e confirmação de atividade maliciosa relacionada ao malware Metamorfo.</p>
+                <a href="../pdfs/Metamorfo.pdf" target="_blank">📄 Abrir PDF</a>
+            </div>
+
+            <!-- CASE 2 -->
+            <div class="case">
+                <h3>📌 RAT executado através de phishing</h3>
+                <p>Investigação conduzida após alertas de execução de RAT que foi feito download através do outlook.</p>
+                <a href="../pdfs/rat.pdf" target="_blank">📄 Abrir PDF</a>
+            </div>
+
+            <!-- CASE 3 -->
+            <div class="case">
+                <h3>📌 Ataque de FakeCaptcha</h3>
+                <p>Análise completa de um ataque de Drive-by Compromise através de uso não conforme do usuário, com evidências e plano de contenção. Essa atividade é muito comum e deve-se criar ferramentas e políticas para detecção e mitigação dessas atividades.</p>
+                <a href="../pdfs/FakeCaptcha.pdf" target="_blank">📄 Abrir PDF</a>
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+</html>

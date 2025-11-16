@@ -1,126 +1,240 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio - Giovanni Alves</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giovanni Alves - Cyber Security</title>
+
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #0d0d0d;
-            color: #ffffff;
             display: flex;
+            background: #0a0a0a;
+            color: white;
         }
+
+        /* ----- SIDEBAR ----- */
         .sidebar {
             width: 260px;
             background: #111;
-            padding: 30px 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            border-right: 2px solid #1f1f1f;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            overflow-y: auto; /* agora acompanha a rolagem */
         }
+
         .sidebar h2 {
             margin-top: 0;
         }
-        .sidebar a {
-            color: #4db8ff;
-            text-decoration: none;
-            padding: 8px 0;
+
+        .sidebar img {
             display: block;
+            margin-bottom: 15px;
+            border-radius: 10px;
         }
-        .content {
-            flex: 1;
+
+        .sidebar a {
+            color: #4fa3ff;
+            text-decoration: none;
+        }
+
+        /* ----- MAIN CONTENT ----- */
+        .main {
+            margin-left: 260px;
             padding: 40px;
-            overflow-y: auto;
+            width: calc(100% - 260px);
         }
-        .section {
-            margin-bottom: 50px;
+
+        h1, h2 {
+            color: #4fa3ff;
         }
-        .card-grid {
+
+        p {
+            line-height: 1.6;
+        }
+
+        /* ----- GRID DE CARDS ----- */
+        .cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 20px;
         }
+
         .card {
-            background: #001f3f;
-            width: 260px;
-            height: 260px;
+            background: #141414;
             padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.4);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             text-align: center;
+            transition: 0.2s;
+            border: 1px solid #222;
         }
+
+        .card:hover {
+            transform: scale(1.03);
+            border-color: #4fa3ff;
+            cursor: pointer;
+        }
+
+        .card img {
+            width: 60px;
+            margin-bottom: 10px;
+        }
+
+        /* CERTIFICADOS com 2 colunas */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .cert-grid img {
+            width: 80px;
+            margin: auto;
+            display: block;
+        }
+
     </style>
 </head>
 <body>
+
+    <!-- SIDEBAR -->
     <div class="sidebar">
-        <h2>Menu</h2>
-        <a href="#sobre">Sobre Mim</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#docs">Documentação</a>
-        <a href="#contato">Contato</a>
+        <h2>Giovanni Alves</h2>
 
-        <h2>Certificados</h2>
-        <ul style="list-style:none; padding:0; margin-top:10px; display:grid; grid-template-columns: repeat(2, 1fr); gap:10px;">
-            <li><img src="./img/cehv13.webp" alt="CEH v13" width="80"></li>
-            <li><img src="./img/ceh_practical.png" alt="CEH Practical" width="80"></li>
-            <li><img src="./img/ceh_master.png" alt="CEH Master" width="80"></li>
-            <li><img src="./img/securityplus.png" alt="Security+" width="80"></li>
-        </ul>
+        <h3>Contato</h3>
+        <p>Email: giovanni33316@gmail.com</p>
+        <p>LinkedIn: www.linkedin.com/in/giovanni-alves-546412154/</a></p>
 
-        <h2>Sobre Mim</h2>
-        <p style="font-size:14px; line-height:1.4;">
-            Cyber Security Consultant | CSIRT | SOC | MDR | CEH Master | Security+ | CySA+ In Progress<br><br>
-            Email: giovanni33316@gmail.com<br>
-            LinkedIn: <a href="#" style="color:#4db8ff;">linkedin.com/in/giovanni</a>
+        <h3>Certificados</h3>
+        <div class="cert-grid">
+            <img src="./img/cehv13.webp">
+            <img src="./img/ceh_practical.png">
+            <img src="./img/ceh_master.png">
+            <img src="./img/securityplus.png">
+        </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+        <h1>Sobre Mim</h1>
+
+        <p>
+            Especialista em Segurança da Informação com foco em análise, detecção e resposta a incidentes em ambientes multinacionais.
+            Tenho experiência prática identificando falhas críticas, corrigindo gaps de visibilidade em SIEM e conduzindo investigações
+            complexas envolvendo ransomware, possíveis vazamentos, hacktivismo e atividades avançadas de ameaça.
         </p>
+        <p>
+            Desenvolvo automações que aprimoram governança e reduzem esforço operacional, incluindo relatórios inteligentes de software
+            non-compliance utilizados pela liderança para tomada de decisão. Atuo diariamente com threat hunting, análise técnica profunda,
+            correlação de eventos e identificação de vulnerabilidades e Shadow IT.
+        </p>
+        <p>
+            Trabalho orientado a impacto, precisão técnica e fortalecimento contínuo da postura de segurança dos ambientes que protejo.
+        </p>
+
+        <hr><br>
+
+        <!-- SERVICES (cada card agora tem href) -->
+        <h2>Serviços</h2>
+
+        <div class="cards">
+            <a href="./servico_incidentes.html" style="text-decoration:none; color:inherit;">
+                <div class="card">
+                    <img src="./img/shield.png">
+                    <h3>Tratamento de Incidentes</h3>
+                    <p>Investigação, contenção e resposta.</p>
+                </div>
+            </a>
+
+            <a href="./servico_automacoes.html" style="text-decoration:none; color:inherit;">
+                <div class="card">
+                    <img src="./img/shield.png">
+                    <h3>Automações</h3>
+                    <p>Criação de fluxos e integrações para reduzir esforço operacional.</p>
+                </div>
+            </a>
+
+            <a href="./servico_ferramentas.html" style="text-decoration:none; color:inherit;">
+                <div class="card">
+                    <img src="./img/shield.png">
+                    <h3>Ferramentas & Malwares</h3>
+                    <p>Desenvolvimento de ferramentas, payloads e utilitários técnicos.</p>
+                </div>
+            </a>
+
+            <a href="./servico_integracoes.html" style="text-decoration:none; color:inherit;">
+                <div class="card">
+                    <img src="./img/shield.png">
+                    <h3>Integrações de Segurança</h3>
+                    <p>Configuração de SIEM, EDR, antivírus e soluções corporativas.</p>
+                </div>
+            </a>
+        </div>
+
+        <br><hr><br>
+
+        <!-- NOVA SEÇÃO: CASES DE USO -->
+        <h2>Cases de Uso</h2>
+
+        <div class="cards">
+            <a href="./src/incidentes.html" style="text-decoration:none; color:inherit;">
+                <div class="card">
+                    <img src="./img/shield.png">
+                    <h3>Tratamento de Incidentes</h3>
+                    <p>Casos reais envolvendo investigação, contenção e resposta.</p>
+                </div>
+            </a>
+
+            <a href="./case_automacoes.html" style="text-decoration:none; color:inherit;">
+                <div class="card">
+                    <img src="./img/shield.png">
+                    <h3>Criação de Automações</h3>
+                    <p>Automatizações usadas por times globais para governança e resposta.</p>
+                </div>
+            </a>
+
+            <a href="./case_malwares.html" style="text-decoration:none; color:inherit;">
+                <div class="card">
+                    <img src="./img/shield.png">
+                    <h3>Ferramentas & Payloads</h3>
+                    <p>Malwares, scripts, módulos e artefatos para estudos avançados.</p>
+                </div>
+            </a>
+        </div>
+		
+		<br><hr><br>
+		
+		<!-- NOVA SEÇÃO: CASES DE USO -->
+        <h2>Projetos</h2>
+		
+		<div class="cards">
+			<a href="./projeto_threathunting.html" style="text-decoration:none; color:inherit;">
+				<div class="card">
+					<img src="./img/shield.png">
+					<h3>Hunting & Detection</h3>
+					<p>Detecções personalizadas, análises e queries para SIEM/EDR.</p>
+				</div>
+			</a>
+
+			<a href="./projeto_automacao.html" style="text-decoration:none; color:inherit;">
+				<div class="card">
+					<img src="./img/shield.png">
+					<h3>Automações</h3>
+					<p>Ferramentas desenvolvidas para reduzir trabalho manual e fortalecer governança.</p>
+				</div>
+			</a>
+
+			<a href="./projeto_malwarelab.html" style="text-decoration:none; color:inherit;">
+				<div class="card">
+					<img src="./img/shield.png">
+					<h3>Malware & Red Team Lab</h3>
+					<p>RATs, payloads, scripts e experimentos avançados em laboratório.</p>
+				</div>
+			</a>
+		</div>
+
     </div>
-
-    <div class="content">
-        <section id="sobre" class="section">
-            <h1>Giovanni dos Santos Alves</h1>
-            <p>Especialista em Segurança da Informação com foco em análise, detecção e resposta a incidentes em ambientes multinacionais.<br> Tenho experiência prática identificando falhas críticas, corrigindo gaps de visibilidade em SIEM e conduzindo investigações complexas envolvendo ransomware, possíveis vazamentos, hacktivismo e atividades avançadas de ameaça.<br> Desenvolvo automações que aprimoram governança e reduzem esforço operacional, incluindo relatórios inteligentes de software non-compliance utilizados pela liderança para tomada de decisão. Atuo diariamente com threat hunting, análise técnica profunda, correlação de eventos e identificação de vulnerabilidades e Shadow IT. Trabalho orientado a impacto, precisão técnica e fortalecimento contínuo da postura de segurança dos ambientes que protejo.</p>
-        </section>
-
-        <section id="servicos" class="section">
-            <h2>Serviços</h2>
-            <div class="card-grid">
-                <div class="card"><img src="./img/shield.png" width="60" style="margin-bottom:10px;"><h3>Tratamento de Incidentes</h3><p>Investigação, contenção e resolução.</p></div>
-                <div class="card"><img src="./img/shield.png" width="60" style="margin-bottom:10px;"><h3>Integração de Ferramentas</h3><p>Instalação e integração de SIEM, EDR e antivírus.</p></div>
-                <div class="card"><img src="./img/shield.png" width="60" style="margin-bottom:10px;"><h3>Criação de Casos de Uso</h3><p>Detecções personalizadas em SIEM/XDR.</p></div>
-                <div class="card"><img src="./img/shield.png" width="60" style="margin-bottom:10px;"><h3>Automação</h3><p>Ferramentas e scripts para segurança.</p></div>
-            </div>
-        </section>
-
-        <section id="projetos" class="section">
-            <h2>Projetos</h2>
-            <div class="card-grid">
-                <div class="card"><h3>RAT Personalizada</h3><p>Sistema próprio de agentes remotos.</p></div>
-                <div class="card"><h3>Ransomware Experimental</h3><p>Projeto para estudo de criptografia.</p></div>
-                <div class="card"><h3>Ferramentas de Forense</h3><p>Automação de coleta e análise.</p></div>
-            </div>
-        </section>
-
-        <section id="documentacao" class="section">
-            <h2>Documentação</h2>
-            <p>Aqui você pode inserir links diretos para PDFs, artigos, tutoriais e repositórios.</p>
-            <ul>
-                <li><a href="#">Guia de Resposta a Incidentes</a></li>
-                <li><a href="#">Documentação da sua RAT</a></li>
-                <li><a href="#">Modelos de Playbooks</a></li>
-            </ul>
-        </section>
-
-        
-    </div>
-    
-    
 </body>
 </html>
