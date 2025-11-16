@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criação de Automações - Giovanni Alves</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0d0d0d;
+            color: #ffffff;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 260px;
+            background: #111;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border-right: 2px solid #1f1f1f;
+        }
+
+        .sidebar a {
+            color: #4db8ff;
+            text-decoration: none;
+            padding: 8px 0;
+            display: block;
+        }
+
+        .content {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        h1, h2 {
+            margin-top: 0;
+        }
+
+        .automation {
+            background: #001f3f;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.45);
+        }
+
+        .automation h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .automation a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 14px;
+            background: #004a99;
+            border-radius: 8px;
+            color: #4db8ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .automation a:hover {
+            background: #0066cc;
+        }
+
+        .cert-grid img {
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <a href="../index.html">🏠 Voltar ao Portfólio</a>
+        <a href="#automacoes">Criação de Automações</a>
+
+        <h2>Certificados</h2>
+        <ul style="list-style:none; padding:0; margin-top:10px; display:grid; grid-template-columns: repeat(2, 1fr); gap:10px;">
+            <li><img src="../img/cehv13.webp" alt="CEH v13" width="80"></li>
+            <li><img src="../img/ceh_practical.png" alt="CEH Practical" width="80"></li>
+            <li><img src="../img/ceh_master.png" alt="CEH Master" width="80"></li>
+            <li><img src="../img/securityplus.png" alt="Security+" width="80"></li>
+        </ul>
+
+        <h2>Sobre Mim</h2>
+        <p style="font-size:14px; line-height:1.4;">
+            Cyber Security Consultant | CSIRT | SOC | MDR | CEH Master | Security+<br><br>
+            Email: giovanni33316@gmail.com
+        </p>
+    </div>
+
+    <div class="content">
+        <h1>Criação de Automações</h1>
+        <p>Abaixo estão automações, scripts e ferramentas desenvolvidas para segurança, governança, hunting e eficiência operacional.</p>
+
+        <section id="automacoes">
+
+            <!-- MODELO DE AUTOMACAO -->
+            <div class="automation">
+                <h3>📌 Automação de Non-Compliance Software</h3>
+                <p>Ferramenta que coleta inventário de software, identifica aplicações proibidas e gera relatório automático para liderança, juntamente com um excel com os hosts identificados.</p>
+                <a href="../pdfs/relatorio_cyber_hygiene_projeto.pdf">📄 Abrir Documentação</a>
+                <a href="#">💻 Ver Código</a>
+            </div>
+
+            <div class="automation">
+                <h3>📌 Gerador Automático de Relatórios de Incidentes</h3>
+                <p>Script que coleta dados de múltiplas fontes, gera resumo técnico e exporta um PDF padronizado para o time de resposta a incidentes.</p>
+                <a href="#">📄 Abrir Exemplo</a>
+                <a href="#">💻 GitHub</a>
+            </div>
+
+            <div class="automation">
+                <h3>📌 Coletor Forense Automático (Windows)</h3>
+                <p>Ferramenta para coleta rápida de artefatos críticos de investigação: processos, rede, registros, logs, histórico e IOC scanning.</p>
+                <a href="#">📄 Ver Manual</a>
+                <a href="#">💻 Acessar Código</a>
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+</html>
